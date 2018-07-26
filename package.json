@@ -3,14 +3,36 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "4.0.0",
+    "classnames": "^2.2.5",
+    "font-awesome": "4.7.0",
+    "lodash": "^4.17.5",
+    "moment": "^2.22.1",
+    "node-sass-chokidar": "^1.2.2",
+    "npm-run-all": "^4.1.2",
+    "numeral": "^2.0.6",
+    "query-string-params": "^1.7.5",
     "react": "^16.4.1",
+    "react-disqus-comments": "^1.2.0",
     "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4"
+    "react-query-params": "^1.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-router-ga": "^1.0.0",
+    "react-scripts": "1.1.4",
+    "react-scroll": "^1.7.9",
+    "react-select": "^2.0.0-beta.2",
+    "react-table": "^6.8.2",
+    "reactstrap": "^5.0.0-beta.3",
+    "recharts": "^1.0.0-beta.10"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+      "start": "npm-run-all -p css:build css:watch js:watch",
+      "build": "npm-run-all    css:build js:build",
+      "test": "react-scripts test --env=jsdom",
+      "eject": "react-scripts eject",
+      "css:build": "node-sass-chokidar src/styles/scss/style.scss -o src/styles/css/ --include-path node_modules",
+      "css:watch": "node-sass-chokidar --watch src/styles/scss/style.scss -o src/styles/css/ --include-path node_modules",
+      "js:build": "react-scripts build",
+      "js:watch": "react-scripts start"
   }
 }

@@ -1,0 +1,63 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Bootstrap
+@import "../bootswatch-cosmo/variables";
+@import "bootstrap/scss/bootstrap";
+@import "../bootswatch-cosmo/bootswatch";
+
+// react-table
+@import '~react-table/react-table.css';
+
+// react-select
+// @import '~react-select/dist/react-select.css';
+
+// font-awesome
+$fa-font-path: "~font-awesome/fonts";
+@import "font-awesome/scss/font-awesome";
+
+.navbar-brand {
+	img {
+		height: 26px;
+	}
+}
+
+.navbar {
+	background: #009688;
+	// background: #0096c9;
+	border-bottom: 1px solid #DDDDDD;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.04);
+
+	.navbar-toggler {
+	}
+
+	li.nav-item {
+		a.nav-link {
+			color: #fff;
+
+			&.active {
+				font-weight: bold;
+			}
+		}
+	}
+
+	.input-group {
+		input:hover {
+			background: #fff !important;
+		}
+	}
+}
+
+.card.search-smk {
+	background: #fffcdb;
+}
+.card.search-sma {
+	background: #f3f3f3;
+}
+.card.search-smp {
+	background: #e4ebff;
+}
+.card.search-sd {
+	background: #ffefef;
+}
