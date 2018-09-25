@@ -1,9 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {withRouter, NavLink, Link} from "react-router-dom";
-import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-
-import { ListGroup, ListGroupItemHeading, ListGroupItemText } from 'reactstrap';
-import Loading from 'components/Loading';
 
 import 'styles/css/style.css';
 
@@ -13,13 +10,7 @@ import {
   NavbarToggler,
   Nav,
   NavItem,
-  InputGroup,
-  InputGroupAddon,
-  Input,
-  Container,
-  Row,
-  Col,
-  Button
+  Container
  } from 'reactstrap';
 
 class Layout extends React.Component {
@@ -41,27 +32,38 @@ class Layout extends React.Component {
   render() {
     // process.env.REACT_APP_THEME
     return (<div>
-      <Navbar expand="md" dark>
-        <Container>
-          <Link className="navbar-brand" to="/">
-            <span>Voucher Pool</span>
-          </Link>
-          <NavbarToggler onClick={this.toggle} className="mr-2  "/>
-          <Collapse isOpen={this.state.isOpen} navbar={true}>
-            <Nav className="ml-auto" navbar={true}>
-              <NavItem>
-                <NavLink className="nav-link" to="/">Home</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Container>
-      </Navbar>
-
-      <br/>
+      {this.props.builtInNav ? (
+        <React.Fragment>
+          <Navbar expand="md" dark>
+            <Container>
+              <Link className="navbar-brand" to="/">
+                <span>React Boilerplate</span>
+              </Link>
+              <NavbarToggler onClick={this.toggle} className="mr-2  "/>
+              <Collapse isOpen={this.state.isOpen} navbar={true}>
+                <Nav className="ml-auto" navbar={true}>
+                  <NavItem>
+                    <NavLink className="nav-link" to="/">Home</NavLink>
+                  </NavItem>
+                </Nav>
+              </Collapse>
+            </Container>
+          </Navbar>
+          <br/>
+        </React.Fragment>
+      ) : null}
 
       {this.props.children}
     </div>);
   }
 }
+
+
+Layout.defaultProps = {
+  builtInNav: true,
+};
+Layout.propTypes = {
+  builtInNav: PropTypes.boolean,
+};
 
 export default withRouter(Layout)
