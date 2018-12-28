@@ -4,18 +4,18 @@
 
 // Bootstrap
 @import "../bootswatch-cosmo/variables";
+
+// Bootstrap
 @import "bootstrap/scss/bootstrap";
-@import "../bootswatch-cosmo/bootswatch";
+
+//Fontawesome
+@import "~@fortawesome/fontawesome-free/css/all.css";
 
 // react-table
 @import '~react-table/react-table.css';
 
 // react-select
 // @import '~react-select/dist/react-select.css';
-
-// font-awesome
-$fa-font-path: "~font-awesome/fonts";
-@import "font-awesome/scss/font-awesome";
 
 .navbar-brand {
 	img {
