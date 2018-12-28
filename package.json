@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "4.0.0",
+    "bootstrap": "^4.2.1",
     "classnames": "^2.2.5",
     "font-awesome": "4.7.0",
     "lodash": "^4.17.5",
@@ -22,17 +22,17 @@
     "react-scroll": "^1.7.9",
     "react-select": "^2.0.0-beta.2",
     "react-table": "^6.8.2",
-    "reactstrap": "^5.0.0-beta.3",
+    "reactstrap": "^6.5.0",
     "recharts": "^1.0.0-beta.10"
   },
   "scripts": {
-      "start": "npm-run-all -p css:build css:watch js:watch",
-      "build": "npm-run-all    css:build js:build",
-      "test": "react-scripts test --env=jsdom",
-      "eject": "react-scripts eject",
-      "css:build": "node-sass-chokidar src/styles/scss/style.scss -o src/styles/css/ --include-path node_modules",
-      "css:watch": "node-sass-chokidar --watch src/styles/scss/style.scss -o src/styles/css/ --include-path node_modules",
-      "js:build": "react-scripts build",
-      "js:watch": "react-scripts start"
+    "start": "npm-run-all -p css:build css:watch js:watch",
+    "build": "npm-run-all    css:build js:build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "css:build": "node-sass-chokidar src/styles/scss/style.scss -o src/styles/css/ --include-path node_modules",
+    "css:watch": "node-sass-chokidar --watch src/styles/scss/style.scss -o src/styles/css/ --include-path node_modules",
+    "js:build": "react-scripts build",
+    "js:watch": "react-scripts start"
   }
 }
